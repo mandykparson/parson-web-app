@@ -25,27 +25,36 @@ function App() {
     <div className="app-container">
       {/* Sidebar / Nav */}
       <nav className="sidebar">
-        <h1 className="logo">Devon Parson</h1>
+        <h1
+          className={`logo ${active === "home" ? "active" : ""}`}
+          onClick={() => setActive("home")}
+        >
+          Devon Parson
+        </h1>
         <ul>
-          <li onClick={() => setActive("home")} className={active === "home" ? "active" : ""}>
-            Home
-          </li>
-          <li onClick={() => setActive("about")} className={active === "about" ? "active" : ""}>
+          <li
+            onClick={() => setActive("about")}
+            className={active === "about" ? "active" : ""}
+          >
             About
           </li>
-          <li onClick={() => setActive("gallery")} className={active === "gallery" ? "active" : ""}>
+          <li
+            onClick={() => setActive("gallery")}
+            className={active === "gallery" ? "active" : ""}
+          >
             Gallery
           </li>
-          <li onClick={() => setActive("contact")} className={active === "contact" ? "active" : ""}>
+          <li
+            onClick={() => setActive("contact")}
+            className={active === "contact" ? "active" : ""}
+          >
             Contact
           </li>
         </ul>
       </nav>
 
       {/* Main Content */}
-      <main className={`content ${active}`}>
-        {renderContent()}
-      </main>
+      <main className={`content ${active}`}>{renderContent()}</main>
     </div>
   );
 }
