@@ -3,10 +3,10 @@ import "./Gallery.css";
 
 const Gallery = () => {
   const images = [
-    "IMG_4190.jpg",
-    "IMG_4191.jpg",
-    "IMG_4192.jpg",
-    "IMG_4189.jpg"
+    "IMG_4190.JPG",
+    "IMG_4191.JPG",
+    "IMG_4192.JPG",
+    "IMG_4189.JPG"
   ];
 
   return (
